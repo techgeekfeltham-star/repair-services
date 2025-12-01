@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Geek Feltham - Mobile Repair & Phone Shop | Laptops, Accessories, CCTV</title>
+    <meta name="description" content="Tech Geek Feltham - Professional phone repair & tech shop. iPhone, Samsung, laptop repairs from £29.99. Buy phones, laptops, accessories. Same-day service. Call 020 8890 6161">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><text x="50%" y="50%" text-anchor="middle" fill="white" font-size="48" font-family="Arial">Your Store Photo Here</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            margin: 30px 0;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero-buttons a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-shop {
+            background: #f5576c;
+            color: white;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-item strong {
+            font-size: 1.2rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Headers */
+        .section {
+            margin: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card .icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card .link-text {
+            color: #667eea;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        /* Before/After Gallery */
+        .gallery-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .before-after-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .before-after-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .before-after-item:hover {
+            transform: scale(1.03);
+        }
+
+        .before-after-images {
+            position: relative;
+            padding-top: 75%; /* 4:3 Aspect Ratio */
+            background: #e0e0e0;
+            overflow: hidden;
+        }
+
+        .before-after-images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .placeholder-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .before-after-label {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .before-after-label h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .before-after-label p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .product-image {
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            background: #f5f5f5;
+            position: relative;
+        }
+
+        .product-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-info h4 {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info .price {
+            color: #667eea;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-info .stock {
+            color: #27ae60;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .product-info .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .product-info .btn:hover {
+            background: #5568d3;
+        }
+
+        /* Store Gallery */
+        .store-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .store-photo {
+            position: relative;
+            padding-top: 75%;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .store-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .store-photo img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Why Choose Us */
+        .features {
+            background: white;
+            border-radius: 15px;
+            padding: 50px 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            color: #666;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .review-card .stars {
+            color: #ffc107;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            color: #333;
+            font-style: italic;
+            margin: 15px 0;
+        }
+
+        .review-card .author {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        /* Location Section */
+        .location {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .location h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .location .hours {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+        }
+
+        .location .hours h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: #ff6b6b;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .emergency-banner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .emergency-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .emergency-banner a {
+            display: inline-block;
+            background: white;
+            color: #ff6b6b;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            color: #666;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        /* We Buy Phones Section */
+        .we-buy-section {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 60px 20px;
+            margin: 60px 0;
+            border-radius: 15px;
+        }
+
+        .we-buy-section h2 {
+            color: white;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .we-buy-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .we-buy-intro strong {
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .price-table-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .price-table-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .price-table-header h3 {
+            color: #27ae60;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .price-table-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .price-table th {
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1rem;
+            border: 1px solid #ddd;
+        }
+
+        .price-table th:first-child {
+            border-radius: 10px 0 0 0;
+        }
+
+        .price-table th:last-child {
+            border-radius: 0 10px 0 0;
+        }
+
+        .price-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .price-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .price-table tr:hover {
+            background: #e8f5e9;
+        }
+
+        .model-name {
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .price-cell {
+            font-weight: bold;
+            color: #27ae60;
+            font-size: 1.1rem;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin: 2px;
+        }
+
+        .grade-a {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .grade-b {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .grade-c {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .we-buy-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .we-buy-feature {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .we-buy-feature .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .we-buy-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .we-buy-cta a {
+            display: inline-block;
+            background: white;
+            color: #27ae60;
+            padding: 18px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .we-buy-cta a:hover {
+            transform: translateY(-3px);
+        }
+
+        .editable-note {
+            background: #fff3cd;
+            border: 2px dashed #ffc107;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            color: #856404;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .hero-buttons a {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .service-grid,
+            .product-grid,
+            .before-after-container,
+            .store-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .price-table-container {
+                padding: 15px;
+                overflow-x: auto;
+            }
+
+            .price-table {
+                font-size: 0.85rem;
+            }
+
+            .price-table th,
+            .price-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>🔧 Tech Geek Feltham</h1>
+        <p class="subtitle">Your Complete Tech Solution</p>
+        <p class="tagline">Professional Repairs & Quality Products Since 2015</p>
+        
+        <div class="hero-buttons">
+            <a href="tel:02088906161" class="btn-primary">📞 Call: 020 8890 6161</a>
+            <a href="#shop" class="btn-shop">🛍️ Browse Products</a>
+            <a href="https://wa.me/447880000287" class="btn-whatsapp">💬 WhatsApp Chat</a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="icon">⭐</span>
+                <strong>4.8/5 Rating</strong>
+            </div>
+            <div class="stat-item">
+                <span class="icon">⚡</span>
+                <strong>Same-Day Service</strong>
+            </div>
+            <div class="stat-item">
+                <span class="icon">✅</span>
+                <strong>3-6 Month Warranty</strong>
+            </div>
+            <div class="stat-item">
+                <span class="icon">🏪</span>
+                <strong>Since 2015</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Repair Services Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>🔧 Professional Repair Services</h2>
+                <p>Expert repairs with quality parts, fast turnaround, and warranty included. Same-day service available!</p>
+            </div>
+
+            <div class="service-grid">
+                <a href="iphone-repair-feltham.html" class="service-card">
+                    <div class="icon">📱</div>
+                    <h3>iPhone Repair</h3>
+                    <p>All models, screen, battery<br><strong>From £29.99</strong></p>
+                    <div class="link-text">View Details →</div>
+                </a>
+
+                <a href="samsung-repair-feltham.html" class="service-card">
+                    <div class="icon">📲</div>
+                    <h3>Samsung Repair</h3>
+                    <p>Galaxy series, screen, battery<br><strong>From £34.99</strong></p>
+                    <div class="link-text">View Details →</div>
+                </a>
+
+                <a href="screen-repair-feltham.html" class="service-card">
+                    <div class="icon">🔨</div>
+                    <h3>Screen Repair</h3>
+                    <p>Cracked screens, digitizer<br><strong>From £29.99</strong></p>
+                    <div class="link-text">View Details →</div>
+                </a>
+
+                <a href="laptop-repair-feltham.html" class="service-card">
+                    <div class="icon">💻</div>
+                    <h3>Laptop Repair</h3>
+                    <p>Mac & Windows laptops<br><strong>From £49.99</strong></p>
+                    <div class="link-text">View Details →</div>
+                </a>
+
+                <a href="console-repair-feltham.html" class="service-card">
+                    <div class="icon">🎮</div>
+                    <h3>Console Repair</h3>
+                    <p>PS5, PS4, Xbox, Switch<br><strong>From £24.99</strong></p>
+                    <div class="link-text">View Details →</div>
+                </a>
+
+                <a href="water-damage-repair-feltham.html" class="service-card">
+                    <div class="icon">💧</div>
+                    <h3>Water Damage</h3>
+                    <p>Professional liquid damage<br><strong>From £39.99</strong></p>
+                    <div class="link-text">View Details →</div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: #666; font-size: 1.1rem;">
+                    Also: <a href="ipad-tablet-repair-feltham.html" style="color: #667eea;">iPad/Tablet</a> | 
+                    <a href="battery-replacement-feltham.html" style="color: #667eea;">Battery Replacement</a> | 
+                    <a href="pc-gaming-repair-feltham.html" style="color: #667eea;">PC/Gaming</a> | 
+                    <a href="data-recovery-feltham.html" style="color: #667eea;">Data Recovery</a> | 
+                    <a href="cctv-installation-feltham.html" style="color: #667eea;">CCTV Installation</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Before/After Gallery Section -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>📸 Our Work - Before & After</h2>
+                <p>See the quality of our repairs! Click any image to enlarge.</p>
+            </div>
+
+            <div class="before-after-container">
+                <div class="before-after-item" onclick="openLightbox('before-after-1')">
+                    <div class="before-after-images">
+                        <div class="placeholder-image">
+                            <div>
+                                📸 Before/After<br>
+                                Screen Repair<br>
+                                <small>Add your photo to:<br>/images/before-after/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-label">
+                        <h4>iPhone Screen Repair</h4>
+                        <p>Cracked to perfect in 30 minutes</p>
+                    </div>
+                </div>
+
+                <div class="before-after-item" onclick="openLightbox('before-after-2')">
+                    <div class="before-after-images">
+                        <div class="placeholder-image">
+                            <div>
+                                📸 Before/After<br>
+                                Water Damage<br>
+                                <small>Add your photo to:<br>/images/before-after/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-label">
+                        <h4>Water Damage Recovery</h4>
+                        <p>Samsung fully restored</p>
+                    </div>
+                </div>
+
+                <div class="before-after-item" onclick="openLightbox('before-after-3')">
+                    <div class="before-after-images">
+                        <div class="placeholder-image">
+                            <div>
+                                📸 Before/After<br>
+                                Battery Replacement<br>
+                                <small>Add your photo to:<br>/images/before-after/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-label">
+                        <h4>Battery Replacement</h4>
+                        <p>From 20% health to 100%</p>
+                    </div>
+                </div>
+
+                <div class="before-after-item" onclick="openLightbox('before-after-4')">
+                    <div class="before-after-images">
+                        <div class="placeholder-image">
+                            <div>
+                                📸 Before/After<br>
+                                Console Repair<br>
+                                <small>Add your photo to:<br>/images/before-after/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-label">
+                        <h4>PS5 Disc Drive Repair</h4>
+                        <p>Not reading discs to perfect</p>
+                    </div>
+                </div>
+
+                <div class="before-after-item" onclick="openLightbox('before-after-5')">
+                    <div class="before-after-images">
+                        <div class="placeholder-image">
+                            <div>
+                                📸 Before/After<br>
+                                Laptop Screen<br>
+                                <small>Add your photo to:<br>/images/before-after/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-label">
+                        <h4>Laptop Screen Replacement</h4>
+                        <p>Broken LCD to crystal clear</p>
+                    </div>
+                </div>
+
+                <div class="before-after-item" onclick="openLightbox('before-after-6')">
+                    <div class="before-after-images">
+                        <div class="placeholder-image">
+                            <div>
+                                📸 Before/After<br>
+                                Back Glass<br>
+                                <small>Add your photo to:<br>/images/before-after/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-after-label">
+                        <h4>Back Glass Replacement</h4>
+                        <p>Shattered to like new</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Shop Products Section -->
+        <div class="section" id="shop">
+            <div class="section-header">
+                <h2>🛍️ Shop Tech Products</h2>
+                <p>Browse our selection of phones, laptops, accessories, and more. Best prices in Feltham!</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product Category Cards -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                📱<br>
+                                Mobile Phones<br>
+                                <small>Add photos to:<br>/images/products/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>📱 Mobile Phones</h4>
+                        <p style="color: #666; margin-bottom: 15px;">iPhone, Samsung, Google Pixel</p>
+                        <a href="tel:02088906161" class="btn">View Selection</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                💻<br>
+                                Laptops<br>
+                                <small>Add photos to:<br>/images/products/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>💻 Laptops</h4>
+                        <p style="color: #666; margin-bottom: 15px;">MacBook, Dell, HP, Lenovo</p>
+                        <a href="tel:02088906161" class="btn">View Selection</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                📲<br>
+                                Phone Cases<br>
+                                <small>Add photos to:<br>/images/products/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>📲 Phone Cases & Accessories</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Cases, screen protectors, more</p>
+                        <a href="tel:02088906161" class="btn">View Selection</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                🔋<br>
+                                Chargers & Cables<br>
+                                <small>Add photos to:<br>/images/products/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>🔋 Chargers & Cables</h4>
+                        <p style="color: #666; margin-bottom: 15px;">USB-C, Lightning, fast chargers</p>
+                        <a href="tel:02088906161" class="btn">View Selection</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                🖥️<br>
+                                PC Accessories<br>
+                                <small>Add photos to:<br>/images/products/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>🖥️ PC Accessories</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Keyboards, mice, monitors</p>
+                        <a href="tel:02088906161" class="btn">View Selection</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                🎧<br>
+                                Audio & More<br>
+                                <small>Add photos to:<br>/images/products/</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>🎧 Audio & More</h4>
+                        <p style="color: #666; margin-bottom: 15px;">Headphones, speakers, gadgets</p>
+                        <a href="tel:02088906161" class="btn">View Selection</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: #666; font-size: 1.1rem;">
+                    💬 <strong>Call us to check availability and prices:</strong> <a href="tel:02088906161" style="color: #667eea; font-weight: bold;">020 8890 6161</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Featured Products Section -->
+        <div class="section">
+            <div class="section-header">
+                <h2>⭐ Featured Products</h2>
+                <p>Our bestselling products - in stock now!</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                📱<br>
+                                iPhone 14<br>
+                                <small>Add photo:<br>iphone-14.jpg</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>iPhone 14</h4>
+                        <p class="price">From £330</p>
+                        <p class="stock">✅ In Stock</p>
+                        <a href="tel:02088906161" class="btn">Call to Order</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                📱<br>
+                                iPhone 11<br>
+                                <small>Add photo:<br>iphone-11.jpg</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>iPhone 11</h4>
+                        <p class="price">From £199</p>
+                        <p class="stock">✅ In Stock</p>
+                        <a href="tel:02088906161" class="btn">Call to Order</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                📲<br>
+                                Phone Cases<br>
+                                <small>Add photo:<br>phone-cases.jpg</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Phone Cases</h4>
+                        <p class="price">From £5.99</p>
+                        <p class="stock">✅ In Stock</p>
+                        <a href="tel:02088906161" class="btn">Call to Order</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <div>
+                                🔌<br>
+                                Fast Charger<br>
+                                <small>Add photo:<br>fast-charger.jpg</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Fast Charger</h4>
+                        <p class="price">From £7.99</p>
+                        <p class="stock">✅ In Stock</p>
+                        <a href="tel:02088906161" class="btn">Call to Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- We Buy Phones Section -->
+    <div class="we-buy-section">
+        <div class="container">
+            <h2>💰 We Buy Your Used iPhones - Instant Cash!</h2>
+            
+            <div class="we-buy-intro">
+                <strong>Sell Your iPhone Today - Get Paid Instantly!</strong>
+                <p>We offer the best prices for used iPhones in Feltham. Instant evaluation, instant payment - cash or bank transfer while you wait!</p>
+            </div>
+
+            <!-- Features -->
+            <div class="we-buy-features">
+                <div class="we-buy-feature">
+                    <span class="icon">💵</span>
+                    <strong>Instant Payment</strong>
+                    <p>Cash or transfer while you wait</p>
+                </div>
+                <div class="we-buy-feature">
+                    <span class="icon">⚡</span>
+                    <strong>Quick Evaluation</strong>
+                    <p>Get a quote in 5 minutes</p>
+                </div>
+                <div class="we-buy-feature">
+                    <span class="icon">🔒</span>
+                    <strong>Data Wiped Safely</strong>
+                    <p>Your privacy protected</p>
+                </div>
+                <div class="we-buy-feature">
+                    <span class="icon">✅</span>
+                    <strong>Fair Prices</strong>
+                    <p>Best rates in Feltham</p>
+                </div>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="price-table-container">
+                <div class="price-table-header">
+                    <h3>💸 Current Buying Prices (December 2025)</h3>
+                    <p>Prices vary by condition - Grade A (Excellent) | Grade B (Good) | Grade C (Fair)</p>
+                </div>
+
+                <div class="editable-note">
+                    <strong>📝 UPDATE PRICES HERE:</strong> Edit the table below to change prices for each grade (A, B, C)
+                </div>
+
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>iPhone Model</th>
+                            <th>Grade A</th>
+                            <th>Grade B</th>
+                            <th>Grade C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="model-name">iPhone 16 128GB</td>
+                            <td class="price-cell">£330</td>
+                            <td class="price-cell">£280</td>
+                            <td class="price-cell">£230</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 16 Pro 128GB</td>
+                            <td class="price-cell">£460</td>
+                            <td class="price-cell">£410</td>
+                            <td class="price-cell">£360</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 16 Pro Max 256GB</td>
+                            <td class="price-cell">£550</td>
+                            <td class="price-cell">£500</td>
+                            <td class="price-cell">£450</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 128GB</td>
+                            <td class="price-cell">£470</td>
+                            <td class="price-cell">£420</td>
+                            <td class="price-cell">£370</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro 256GB</td>
+                            <td class="price-cell">£700</td>
+                            <td class="price-cell">£650</td>
+                            <td class="price-cell">£600</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro 512GB</td>
+                            <td class="price-cell">£1,000</td>
+                            <td class="price-cell">£950</td>
+                            <td class="price-cell">£900</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro 1TB</td>
+                            <td class="price-cell">£760</td>
+                            <td class="price-cell">£710</td>
+                            <td class="price-cell">£660</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro Max 256GB</td>
+                            <td class="price-cell">£780</td>
+                            <td class="price-cell">£730</td>
+                            <td class="price-cell">£680</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro Max 512GB</td>
+                            <td class="price-cell">£850</td>
+                            <td class="price-cell">£800</td>
+                            <td class="price-cell">£750</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro Max 1TB</td>
+                            <td class="price-cell">£1,000</td>
+                            <td class="price-cell">£950</td>
+                            <td class="price-cell">£900</td>
+                        </tr>
+                        <tr>
+                            <td class="model-name">iPhone 17 Pro Max 2TB</td>
+                            <td class="price-cell">£1,210</td>
+                            <td class="price-cell">£1,160</td>
+                            <td class="price-cell">£1,110</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px;">
+                    <h4 style="color: #27ae60; margin-bottom: 10px;">📋 Condition Grades Explained:</h4>
+                    <p style="color: #666; margin: 5px 0;"><span class="grade-badge grade-a">Grade A</span> <strong>Excellent:</strong> Like new, minimal signs of use, fully functional</p>
+                    <p style="color: #666; margin: 5px 0;"><span class="grade-badge grade-b">Grade B</span> <strong>Good:</strong> Light scratches, normal wear, fully functional</p>
+                    <p style="color: #666; margin: 5px 0;"><span class="grade-badge grade-c">Grade C</span> <strong>Fair:</strong> Visible wear & tear, may have minor damage, fully functional</p>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 10px;">
+                    <p style="color: #856404; margin: 0;"><strong>💡 Note:</strong> Don't see your model? We buy ALL iPhone models! Contact us for a quote on older models like iPhone 11, 12, 13, 14, 15 and more.</p>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="we-buy-cta">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Ready to Sell Your iPhone?</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">Visit us in-store or call for an instant quote!</p>
+                <a href="tel:02088906161">📞 Call: 020 8890 6161</a>
+                <a href="https://wa.me/447880000287">💬 WhatsApp Quote</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                <p style="font-size: 1rem;"><strong>Visit us at:</strong> 2 Rochester Parade, High Street, Feltham TW13 4DX</p>
+                <p style="font-size: 1rem; margin-top: 10px;"><strong>Opening Hours:</strong> Mon-Fri 9AM-7PM | Sat-Sun 10AM-6PM</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Store Gallery Section -->
+    <div class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>🏪 Visit Our Store</h2>
+                <p>Take a look inside Tech Geek Feltham. Click any photo to enlarge.</p>
+            </div>
+
+            <div class="store-gallery">
+                <div class="store-photo" onclick="openLightbox('store-1')">
+                    <div class="placeholder-image">
+                        <div>
+                            📸 Store Exterior<br>
+                            <small>Add your photo to:<br>/images/store-gallery/</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-photo" onclick="openLightbox('store-2')">
+                    <div class="placeholder-image">
+                        <div>
+                            📸 Interior View<br>
+                            <small>Add your photo to:<br>/images/store-gallery/</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-photo" onclick="openLightbox('store-3')">
+                    <div class="placeholder-image">
+                        <div>
+                            📸 Repair Workstation<br>
+                            <small>Add your photo to:<br>/images/store-gallery/</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-photo" onclick="openLightbox('store-4')">
+                    <div class="placeholder-image">
+                        <div>
+                            📸 Product Display<br>
+                            <small>Add your photo to:<br>/images/store-gallery/</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-photo" onclick="openLightbox('store-5')">
+                    <div class="placeholder-image">
+                        <div>
+                            📸 Service Counter<br>
+                            <small>Add your photo to:<br>/images/store-gallery/</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-photo" onclick="openLightbox('store-6')">
+                    <div class="placeholder-image">
+                        <div>
+                            📸 Team at Work<br>
+                            <small>Add your photo to:<br>/images/store-gallery/</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Why Choose Us Section -->
+        <div class="section">
+            <div class="features">
+                <div class="section-header">
+                    <h2>Why Choose Tech Geek Feltham?</h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon">⚡</div>
+                        <h3>Same-Day Service</h3>
+                        <p>Most repairs completed the same day. Drop off in the morning, pick up in the afternoon!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">💰</div>
+                        <h3>Best Prices</h3>
+                        <p>Competitive pricing without compromising on quality. Free diagnostic included!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">✅</div>
+                        <h3>Warranty Included</h3>
+                        <p>3-6 month warranty on all repairs. We stand behind our work!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">👨‍🔧</div>
+                        <h3>Expert Technicians</h3>
+                        <p>Highly trained staff with years of experience in all types of repairs.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🔧</div>
+                        <h3>Quality Parts</h3>
+                        <p>We use only high-quality replacement parts for long-lasting repairs.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">⭐</div>
+                        <h3>Trusted Service</h3>
+                        <p>4.8/5 rating from hundreds of satisfied customers in Feltham!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="section">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Fixed my iPhone screen in under an hour! Great service and fair prices. Highly recommend Tech Geek Feltham!"</p>
+                    <p class="author">- Sarah M.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"My laptop was running so slow. They cleaned it up and upgraded the RAM. Works like new! Thank you!"</p>
+                    <p class="author">- David L.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Professional CCTV installation for my shop. Excellent work and very reasonable price. Will use again!"</p>
+                    <p class="author">- Amit P.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Dropped my phone in the toilet! They recovered it and saved all my photos. Amazing service!"</p>
+                    <p class="author">- Jessica R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"My PS5 wasn't reading discs. They fixed it same day for a fair price. Very professional!"</p>
+                    <p class="author">- James T.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Great selection of phone cases and accessories. Staff are friendly and knowledgeable. My go-to shop!"</p>
+                    <p class="author">- Priya K.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Banner -->
+        <div class="emergency-banner">
+            <h3>🚨 Need Urgent Repair?</h3>
+            <p>Walk-ins welcome! Most repairs done same day.</p>
+            <a href="tel:02088906161">Call Now: 020 8890 6161</a>
+        </div>
+
+        <!-- Location Section -->
+        <div class="location">
+            <h2>📍 Visit Us in Feltham</h2>
+            <p style="font-size: 1.3rem; margin: 20px 0;"><strong>Tech Geek Feltham</strong></p>
+            <p style="font-size: 1.1rem; margin: 10px 0;">2 Rochester Parade, High Street<br>Feltham, London TW13 4DX</p>
+            
+            <div class="hours">
+                <h3>Opening Hours:</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    <strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM<br>
+                    <strong>Saturday - Sunday:</strong> 10:00 AM - 6:00 PM<br>
+                    <strong>Bank Holidays:</strong> 10:00 AM - 6:00 PM
+                </p>
+            </div>
+
+            <div>
+                <a href="tel:02088906161" style="display: inline-block; background: white; color: #667eea; padding: 18px 45px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">📞 Call: 020 8890 6161</a>
+                <a href="https://wa.me/447880000287" style="display: inline-block; background: #25D366; color: white; padding: 18px 45px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">💬 WhatsApp Chat</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p style="font-size: 1.1rem; margin-bottom: 10px; font-weight: bold; color: #667eea;">© 2025 Tech Geek Feltham | Professional Repair & Tech Shop Since 2015</p>
+        <p style="font-size: 0.95rem;">Phone & Tablet Repair | Laptop & PC Repair | Console Repair | CCTV Installation | Data Recovery</p>
+        <p style="font-size: 0.95rem; margin-top: 10px;">Mobile Phones | Laptops | Accessories | Cables | Chargers</p>
+        <p style="font-size: 0.95rem; margin-top: 10px;">2 Rochester Parade, High Street, Feltham TW13 4DX | Tel: 020 8890 6161</p>
+        <p style="font-size: 0.9rem; margin-top: 15px; color: #999;">iPhone, iPad, Samsung, MacBook, PlayStation, Xbox repairs | Phone shop near me Feltham</p>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" onclick="closeLightbox()">×</div>
+        <div class="lightbox-prev" onclick="navigateLightbox(-1)">‹</div>
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Image" id="lightbox-img">
+        </div>
+        <div class="lightbox-next" onclick="navigateLightbox(1)">›</div>
+    </div>
+
+    <script>
+        // Lightbox functionality
+        function openLightbox(imageId) {
+            // Placeholder - will work when real images are added
+            console.log('Opening lightbox for:', imageId);
+            alert('Image gallery will work when you add your photos!\n\nUpload photos to:\n/images/before-after/\n/images/store-gallery/');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function navigateLightbox(direction) {
+            // Placeholder - will work when real images are added
+            console.log('Navigate:', direction);
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
